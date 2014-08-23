@@ -1,3 +1,5 @@
+<?php echo $this->element('admin_nav'); ?>
+
 <h1>Edit Post</h1>
 <?php
 echo $this->Form->create('Post');

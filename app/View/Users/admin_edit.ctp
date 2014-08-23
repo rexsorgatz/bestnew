@@ -1,3 +1,5 @@
+<?php echo $this->element('admin_nav'); ?>
+
 <h1>Edit Users</h1>
 <?php
 echo $this->Form->create('User');

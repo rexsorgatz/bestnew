@@ -38,6 +38,7 @@
 
 	Router::connect('/admin/users', array('controller' => 'users', 'action' => 'index', 'admin' => true));
 	Router::connect('/admin/posts', array('controller' => 'posts', 'action' => 'index', 'admin' => true));
+	Router::connect('/admin/images', array('controller' => 'images', 'action' => 'index', 'admin' => true));
 	
 	Router::connect('/admin/:controller/:action/*', array('action' => null, 'prefix' => 'admin', 'admin' => true)); 
 

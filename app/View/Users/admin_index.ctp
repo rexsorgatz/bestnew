@@ -1,5 +1,7 @@
 <!-- File: /app/View/Posts/index.ctp -->
 
+<?php echo $this->element('admin_nav'); ?>
+
 <h1>Users</h1>
 <p><?php echo $this->Html->link('Add User', array('action' => 'add')); ?></p>
 <table>

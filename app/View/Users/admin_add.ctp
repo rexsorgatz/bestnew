@@ -1,4 +1,9 @@
 <!-- app/View/Users/add.ctp -->
+
+<?php echo $this->element('admin_nav'); ?>
+
+<h1>Add User</h1>
+
 <div class="users form">
 <?php echo $this->Form->create('User'); ?>
     <fieldset>

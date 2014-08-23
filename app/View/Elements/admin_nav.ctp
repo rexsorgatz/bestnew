@@ -1,0 +1,2 @@
+<h1><a href="/">HOME</a> | <?php echo $this->Html->link('Posts',array('manager' => false, 'controller' => 'posts', 'action' => 'index', 'admin' => true)); ?> |
+<?php echo $this->Html->link('Users',array('manager' => false, 'controller' => 'users', 'action' => 'index', 'admin' => true)); ?> | <?php echo $this->Html->link('Images',array('manager' => false, 'controller' => 'images', 'action' => 'index', 'admin' => true)); ?></h1>
