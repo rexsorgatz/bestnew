@@ -25,12 +25,24 @@
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
 	//Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
-	Router::connect('/', array('controller' => 'posts', 'action' => 'index'));
+	Router::connect('/', array('controller' => 'home', 'action' => 'index'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
+
+/**
+ * Reroutes for the admin
+ */
+
+	Router::connect('/admin/users', array('controller' => 'users', 'action' => 'index', 'admin' => true));
+	Router::connect('/admin/posts', array('controller' => 'posts', 'action' => 'index', 'admin' => true));
+	
+	Router::connect('/admin/:controller/:action/*', array('action' => null, 'prefix' => 'admin', 'admin' => true)); 
+
+	//Router::connect('/admin/:controller/:action/*', array('action' => null, 'prefix' => 'admin', 'admin' => true ));
+	 
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.

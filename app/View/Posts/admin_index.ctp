@@ -6,11 +6,9 @@
     <tr>
         <th>Id</th>
         <th>Title</th>
-        <th>Actions</th>
         <th>Created</th>
+        <th>Actions</th>
     </tr>
-
-<!-- Here's where we loop through our $posts array, printing out post info -->
 
     <?php foreach ($posts as $post): ?>
     <tr>
@@ -22,6 +20,9 @@
                     array('action' => 'view', $post['Post']['id'])
                 );
             ?>
+        </td>
+        <td>
+            <?php echo $post['Post']['created']; ?>
         </td>
         <td>
             <?php
@@ -36,9 +37,6 @@
                     'Edit', array('action' => 'edit', $post['Post']['id'])
                 );
             ?>
-        </td>
-        <td>
-            <?php echo $post['Post']['created']; ?>
         </td>
     </tr>
     <?php endforeach; ?>

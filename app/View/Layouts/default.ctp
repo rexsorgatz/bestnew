@@ -20,21 +20,29 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
-	</title>
-	<?php
+<?php echo $this->Html->charset(); ?>
+<title>Best Thing Ever</title>
+<meta property="og:title" content="Best Thing Ever" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="Best Thing Ever" />
+<meta property="og:description" content="" />
+<meta property="fb:admins" content="" />
+<meta property="fb:app_id" content="" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=950">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="" />
+<?php
 		echo $this->Html->meta('icon');
-
 		echo $this->Html->css('cake.generic');
-
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
+?>
+
 </head>
+
+
 <body>
 	<div id="container">
 		<div id="header">
